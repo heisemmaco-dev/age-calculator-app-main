@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="./dist/css/style.css">
+  
+</head>
+<body>
+
+  <main>
+    <form autocomplete="on">
+      <div class="general_wrap">
+        
+        <div class="wraper">
+          <label for="day_input" class="day_label">DAY</label>
+          <input type="number" placeholder="DD" id="day_input" oninput="limitInput(this)">
+          <small class="erro-day"></small>
+        </div>
+  
+        <div class="wraper">
+          <label for="month_input" class="month_label">MONTH</label>
+          <input type="number" placeholder="MM" id="month_input" oninput="limitInput(this)">
+          <small class="erro-month"></small>
+        </div>
+  
+        <div class="wraper">
+          <label for="year_input" class="year_label">YEAR</label>
+          <input type="number" placeholder="YYYY" id="year_input"oninput="limitYearInput(this)">
+          <small class="erro-year"></small>
+        </div>
+  
+      </div>
+            
+      <button aria-label="click to submit your input"><img src="/assets/images/icon-arrow.svg" alt="icon arrow"></button>
+    </form>
+  
+    <section>
+
+      <h1><span class="year_output">- -</span> years</h1>
+      <h1><span class="month_output">- -</span> months</h1>
+      <h1><span class="day_output">- -</span> days</h1>
+
+    </section>
+
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+@forward 'Global';
+@use './Global/mixin' as *;
+@use './Global/variable' as *;
+@use './Global/typograpy' as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    padding: rem(16);
+    padding-block: 40px;
+    background-color: $White;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 50px;
+
+    border-radius: 20px 20px 90px 20px;
+
+    width: min(100% - 40px, 550px);
+
+    @include media(500px) {
+        padding: 24px;
+        padding-block: 40px;
+
+        border-radius: 20px 20px 135px 20px;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 2px solid $Off-white;
+    width: 100%;
+    position: relative;
+
+    @include media(500px) {
+        gap: 0;
+    }
+
+    .general_wrap {
+        display: flex;
+        align-self: start;
+        gap: 14px;
+        width: min(100%, 374px);
+
+        margin-bottom: 60px;
+
+        @include media(em(500)) {
+            margin-bottom: 40px
+        }
+    }
+
+    .wraper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+
+    label {
+        font-size: 0.55rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: $Smokey-grey;
+        width: 100%;
+    }
+
+   small {
+        font-weight: 400;
+        font-size: clamp(rem(8), rem(2) + 1vw, rem(10));
+        color: $Light-red;
+    }
+
+    }
+
+
+    input {
+        width: 80px;
+        height: 49px;
+        display: flex;
+        text-align: start;
+        padding: 14px;
+        width: 100%;
+
+        border-radius: 6px;
+
+        border: 1px solid $Off-white;
+        outline: none;
+        cursor: pointer;
+
+        font-weight: 900;
+        transition: border 0.15s ease-in;
+
+        &[type=number]::-webkit-inner-spin-button,&[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+
+        &::placeholder {
+            font-weight: 900;
+        }
+
+        &:is(:hover, :focus) {
+            border: 1px solid $Purple;  
+        }
+    }
+
+    button {
+        background-color: $Purple;
+        border-radius: 50%;
+        padding: 13px;
+        outline: none;
+        border: none;
+        position: absolute;
+        bottom: -29px;
+
+        cursor: pointer;
+        transition: all 0.15s ease-in;
+
+        &:is(:hover, :focus) {
+            background-color: $Off-black;
+        }
+
+        img {
+            width: 29px;
+            height: 29px;
+        }
+
+        @include media(540px) {
+            right: 0;
+            padding: 17px;
+            bottom: -38px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    line-height: 1;
+
+    h1 {
+        font-size: rem(35);
+        font-style: italic;
+        word-spacing: 0.1px;
+        font-size: clamp(rem(34), rem(25) + 2vw, rem(45));
+
+        @include media(em(375)) {
+            font-size: rem(52)
+        }
+
+        @include media(545px) {
+            font-size: rem(64)
+        }
+
+        span {
+            color: $Purple;
+        }
+    }
+}
+
+
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    
+    a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}
