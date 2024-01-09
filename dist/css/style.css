@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
-:root {
-  --red: red;
-}
-
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -69,16 +65,16 @@ body {
 
 main {
   padding: 1rem;
-  padding-block: 40px;
+  padding-block: 2.5rem;
   background-color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
-  border-radius: 20px 20px 90px 20px;
-  width: min(100% - 40px, 550px);
+  gap: 3.125rem;
+  border-radius: 1.25rem 1.25rem 5.625rem 1.25rem;
+  width: min(100% - 2.5rem, 34.375rem);
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 31.25rem) {
   main {
     padding: 24px;
     padding-block: 40px;
@@ -95,7 +91,7 @@ form {
   width: 100%;
   position: relative;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 31.25rem) {
   form {
     gap: 0;
   }
@@ -103,8 +99,8 @@ form {
 form .general_wrap {
   display: flex;
   align-self: start;
-  gap: 14px;
-  width: min(100%, 374px);
+  gap: 0.875rem;
+  width: min(100%, 23.375rem);
   margin-bottom: 60px;
 }
 @media screen and (min-width: 31.25em) {
@@ -131,13 +127,13 @@ form .wraper small {
   color: hsl(0, 100%, 67%);
 }
 form input {
-  width: 80px;
-  height: 49px;
+  width: 5rem;
+  height: 3.0625rem;
   display: flex;
   text-align: start;
-  padding: 14px;
+  padding: 0.875rem;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   border: 1px solid hsl(0, 0%, 94%);
   outline: none;
   cursor: pointer;
@@ -171,18 +167,18 @@ form button:is(:hover, :focus) {
   background-color: hsl(0, 0%, 8%);
 }
 form button img {
-  width: 29px;
-  height: 29px;
+  width: 1.8125rem;
+  height: 1.8125rem;
 }
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 33.75rem) {
   form button {
     right: 0;
     padding: 17px;
     bottom: -38px;
   }
   form button img {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 
@@ -203,7 +199,7 @@ section h1 {
     font-size: 3.25rem;
   }
 }
-@media screen and (min-width: 545px) {
+@media screen and (min-width: 34.0625em) {
   section h1 {
     font-size: 4rem;
   }
@@ -213,8 +209,9 @@ section h1 span {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
+  margin-top: 40px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);

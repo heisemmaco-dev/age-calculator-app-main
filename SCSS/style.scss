@@ -10,20 +10,20 @@ body {
 
 main {
     padding: rem(16);
-    padding-block: 40px;
+    padding-block: rem(40);
     background-color: $White;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    gap: 50px;
+    gap: rem(50);
 
-    border-radius: 20px 20px 90px 20px;
+    border-radius: rem(20) rem(20) rem(90) rem(20);
 
-    width: min(100% - 40px, 550px);
+    width: min(100% - rem(40), rem(550));
 
-    @include media(500px) {
+    @include media(rem(500)) {
         padding: 24px;
         padding-block: 40px;
 
@@ -40,15 +40,15 @@ form {
     width: 100%;
     position: relative;
 
-    @include media(500px) {
+    @include media(rem(500)) {
         gap: 0;
     }
 
     .general_wrap {
         display: flex;
         align-self: start;
-        gap: 14px;
-        width: min(100%, 374px);
+        gap: rem(14);
+        width: min(100%, rem(374));
 
         margin-bottom: 60px;
 
@@ -81,14 +81,14 @@ form {
 
 
     input {
-        width: 80px;
-        height: 49px;
+        width: rem(80);
+        height: rem(49);
         display: flex;
         text-align: start;
-        padding: 14px;
+        padding: rem(14);
         width: 100%;
 
-        border-radius: 6px;
+        border-radius: rem(6);
 
         border: 1px solid $Off-white;
         outline: none;
@@ -97,7 +97,8 @@ form {
         font-weight: 900;
         transition: border 0.15s ease-in;
 
-        &[type=number]::-webkit-inner-spin-button,&[type=number]::-webkit-outer-spin-button {
+        &[type=number]::-webkit-inner-spin-button,
+        &[type=number]::-webkit-outer-spin-button {
             -webkit-appearance: none;
         }
 
@@ -127,18 +128,18 @@ form {
         }
 
         img {
-            width: 29px;
-            height: 29px;
+            width: rem(29);
+            height: rem(29);
         }
 
-        @include media(540px) {
+        @include media(rem(540)) {
             right: 0;
             padding: 17px;
             bottom: -38px;
 
             img {
-                width: 40px;
-                height: 40px;
+                width: rem(40);
+                height: rem(40);
             }
         }
     }
@@ -161,7 +162,7 @@ section {
             font-size: rem(52)
         }
 
-        @include media(545px) {
+        @include media(em(545)) {
             font-size: rem(64)
         }
 
@@ -174,7 +175,8 @@ section {
 
 
 .attribution { 
-    font-size: 11px; text-align: center;
+    font-size: rem(11); text-align: center;
+    margin-top: 40px;
     
     a { 
         color: hsl(228, 45%, 44%); 
