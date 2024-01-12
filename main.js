@@ -85,13 +85,15 @@ function handlerSubmit(e) {
         const d = day - inputDay.value
         const m = month - inputMonth.value
         const y = year - inputYear.value
+        
 
-        outputDay.innerHTML = d
-        outputmonth.innerHTML = m;
-        outputyear.innerHTML = y
+        animateToNumber(d, 1000, outputDay)
+        animateToNumber(m, 1000, outputmonth)
+        animateToNumber(y, 1000, outputyear)
     }
 
 }
+
 
 // Restrict date and month input to two characters
 function limitInput(input) {
@@ -106,3 +108,25 @@ function limitYearInput(input) {
         input.value = input.value.slice(0, 4); 
     }
  }
+
+ //animation
+ function animateToNumber(targetNumber, duration, elementId) {
+   // const animatedNumber = document.getElementById(elementId);
+    let startTimestamp;
+
+    function animateNumber(timestamp) {
+      if (!startTimestamp) startTimestamp = timestamp;
+
+      const progress = timestamp - startTimestamp;
+      const percentage = Math.min(progress / duration, 1);
+
+      const currentNumber = Math.floor(percentage * targetNumber);
+      elementId.textContent = currentNumber;
+
+      if (percentage < 1) {
+        requestAnimationFrame(animateNumber);
+      }
+    }
+
+    requestAnimationFrame(animateNumber);
+  }
